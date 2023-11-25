@@ -1,0 +1,242 @@
+:root {
+    --main-color1: #cc241f;
+    --gray-color1: #ffffffbf;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+}
+
+#navbar {
+    max-width: 80%;
+    width: 70vw;
+    height: 70px;
+    min-height: 70px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropbtn {
+    display: none;
+}
+
+#title {
+    color: var(--main-color1);
+    font-size: 3rem;
+}
+
+#header-flex {
+    width: 30vw;
+    display: flex;
+    justify-content:  space-between;
+}
+
+.header-links {
+    color: #545050;
+    opacity: .8;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.header-links:hover {
+    color: var(--main-color1);
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color1);
+}
+
+@media (max-width: 1000px) {
+    body {
+        min-height: 1000px;
+    }
+    #navbar {
+        margin-bottom: 50px;
+    }
+    /* creating dropdown navbar at media conditions */
+    
+    /* Links inside the navbar */
+    #navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+  
+  /* The dropdown container */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 60px;
+    color: #000;
+    border: none;
+    outline: none;
+    color: gray;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  #navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #e6e1e1;
+    color: var(--main-color1)
+  }
+  
+  /* Dropdown content (hidden by default) */
+  #header-flex {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  #header-flex a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  #header-flex a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover #header-flex {
+    display: block;
+  }
+  .dropbtn {
+    display: block;
+  }
+}
+
+/* footer */
+
+footer {
+    box-sizing: border-box;
+    max-height: 70px;
+}
+
+#footer-border {
+    width: 100%;
+    border: 1px solid var(--main-color1);
+}
+
+#copyright {
+    text-align: center;
+}
+
+#privacy-terms-container {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+#privacy-terms-container > span > a {
+    text-decoration: none;
+    color: var(--main-color1)
+}
+
+#privacy-policy {
+    margin-right: 5px;
+}
+
+#terms-and-conditions {
+    margin-left: 5px;
+}
+
+
+
+/* FAQ grid section: our reason for existance */
+
+main {
+    margin-top: 50px;
+}
+
+h3 {
+    margin-left: 5%;
+    color: var(--main-color1);
+}
+
+h2 {
+    margin-bottom: -10px;
+}
+
+.item-description {
+    text-align: justify;
+    width: 330px;
+    margin-left: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 40vw));
+    justify-content: space-around;
+}
+
+.grid-child {
+    width: 40vw;
+    margin: 20px auto;
+}
+
+h2 {
+    display: inline-block;
+    text-align: start;
+    color: var(--main-color1)
+}
+
+.border {
+    border-top: 1px solid var(--main-color1);
+    height: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.border:last-of-type {
+    display: none;;
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .border {
+        border: none;
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        min-width: 350px;
+        max-width: 600px;
+        margin-left: -100px;
+    }
+    .item-description {
+        width: 350px;
+        margin: 20px 20px 20px -50px;
+    }
+    .border {
+        border: none;
+    }
+}
+
